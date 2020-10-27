@@ -1,0 +1,49 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String c[] ={"Espresso Coffee","Cappuccino Coffee","Latte Coffee"};      //3
+        String t[] ={"Plain Tea","Assam Tea","Ginger Tea","Cardamom Tea","Masala Tea","Lemon Tea","Green Tea","Organic darjeeling Tea"};  //8
+        String s[]={"Hot and Sour Soup","Veg Corn Soup","Tomato Soup","Spicy Tomato Soup"}; //4
+        String b[]={"Hot Chocolate Drink","Badam Drink","Badam-Pista Drink"};  //3
+        char ch=sc.next().charAt(0);                  //input character
+        int v=sc.nextInt();                           //input number
+        if(ch!='c'&&ch!='C'&&ch!='t'&&ch!='T'&&ch!='s'&&ch!='S'&&ch!='b'&&ch!='B'){
+            System.out.println("INVALID OPTION!");
+        }
+        else if(ch=='c'|| ch=='C'){
+            if(v<=0||v>3){
+                System.out.println("INVALID OPTION!");
+            }
+            else {
+                System.out.println("Enjoy your "+c[v-1]);
+            }
+        }
+        else if(ch=='t'||ch=='T'){
+            if(v<=0||v>8){
+                System.out.println("INVALID OPTION!");
+            }
+            else {
+                System.out.println("Enjoy your "+t[v-1]);
+            }
+        }
+        else if(ch=='s'||ch=='S'){
+            if(v<=0||v>4){
+                System.out.println("INVALID OPTION!");
+            }
+            else {
+                System.out.println("Enjoy your "+s[v-1]);
+            }
+        }
+        else if(ch=='b'||ch=='B'){
+            if(v<=0||v>3){
+                System.out.println("INVALID OPTION!");
+            }
+            else {
+                System.out.println("Enjoy your "+b[v-1]);
+            }
+        }
+    }
+}
